@@ -1,6 +1,6 @@
 "use client";
 
-import { Users, BarChart, Settings, Menu } from "lucide-react";
+import { Users, Settings, Menu, Library } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ScrollArea } from "./ui/scroll-area";
@@ -16,7 +16,7 @@ import { Button } from "./ui/button";
 
 const sidebarItems = [
   { name: "Dashboard", href: "/dashboard", icon: Users },
-  { name: "Statistics", href: "/courses", icon: BarChart },
+  { name: "Courses", href: "/courses", icon: Library },
   { name: "Settings", href: "/customize", icon: Settings },
 ];
 
