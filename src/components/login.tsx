@@ -13,7 +13,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export const Login = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("jane@example.com");
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {

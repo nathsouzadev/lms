@@ -3,9 +3,10 @@
 import { LogOut } from "lucide-react";
 import { LargeSidebar, MobileSidebar } from "./sidebar";
 import { Button } from "./ui/button";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
+  const router = useRouter();
   const pathname = usePathname();
   const isHome = pathname === "/";
 
@@ -26,6 +27,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               variant="outline"
               size="icon"
               className="w-10 h-10 rounded-full"
+              onClick={() => router.push("/")}
             >
               <LogOut className="h-4 w-4" />
               <span className="sr-only">Sair</span>
