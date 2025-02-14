@@ -2,6 +2,8 @@
 
 import { Login } from "@/components/login";
 
+console.log("Hello from the client!");
+
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
