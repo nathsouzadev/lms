@@ -1,14 +1,11 @@
 import { AuthContext } from "@/context/AuthContext";
 import { Path } from "@/lib/courseTypes";
 import { User } from "@/lib/types";
-import { useRouter } from "next/navigation";
 import { useContext } from "react";
 
 export const useAuth = () => {
   const { users, setUsers, paths, setPaths, score, setScore } =
     useContext(AuthContext);
-
-  const router = useRouter();
 
   const editUser = (user: User) => {
     const updatedUsers = users.map((u) => (u.id === user.id ? user : u));

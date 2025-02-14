@@ -1,6 +1,6 @@
 "use client";
 
-import { Users, Settings, Menu, Library } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ScrollArea } from "./ui/scroll-area";
@@ -13,17 +13,12 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 import { Button } from "./ui/button";
-
-const sidebarItems = [
-  { name: "Dashboard", href: "/dashboard", icon: Users },
-  { name: "Courses", href: "/courses", icon: Library },
-  { name: "Settings", href: "/customize", icon: Settings },
-];
+import { SIDEBAR_ITEMS } from "@/constants/sidebar-items";
 
 const SidebarContent = ({ pathname }: { pathname: string }) => {
   return (
     <div className="space-y-1">
-      {sidebarItems.map((item) => (
+      {SIDEBAR_ITEMS.map((item) => (
         <Link
           key={item.href}
           href={item.href}

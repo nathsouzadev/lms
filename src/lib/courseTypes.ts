@@ -17,10 +17,3 @@ export type Path = {
   unlocked: boolean;
   completed: boolean;
 };
-
-export type UserProgress = {
-  [pathId: string]: {
-    completed: boolean;
-    answers: { [questionId: string]: boolean };
-  };
-};
